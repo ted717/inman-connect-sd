@@ -1,11 +1,11 @@
 export const EVENT = {
   name: "Inman Connect San Diego",
   shortName: "Connect San Diego",
-  dates: "July 28–30, 2026",
+  dates: "July 28 - 30, 2026",
   startISO: "2026-07-28T09:00:00-07:00",
   superEarlyBirdEnds: "2026-07-25T23:59:59-07:00",
   city: "San Diego",
-  venue: "Manchester Grand Hyatt",
+  venue: "Marriott Marquis San Diego Marina",
   heroHeadline: "The future won't wait. Neither should you.",
   heroSub:
     "Join 4,000+ agents, brokers, and industry leaders at the must-attend real estate event. Real strategies. Real networking. Real results.",
@@ -216,7 +216,7 @@ export const FAQ = [
   },
   {
     q: "Where is it held?",
-    a: "Manchester Grand Hyatt, on the San Diego Marina. Room block rates are available through our booking partner.",
+    a: "Marriott Marquis San Diego Marina. Room block rates are available through our booking partner.",
   },
   {
     q: "Will sessions be recorded?",

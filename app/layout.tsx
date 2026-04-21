@@ -27,7 +27,7 @@ const tungsten = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Inman Connect San Diego — July 28–30, 2026",
+  title: "Inman Connect San Diego — July 28 - 30, 2026",
   description:
     "Join 4,000+ agents, brokers, and industry leaders at the must-attend real estate event.",
 };

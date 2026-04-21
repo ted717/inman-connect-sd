@@ -22,7 +22,7 @@ export default function Hero() {
 
       <div className="relative mx-auto flex min-h-[640px] max-w-[1200px] flex-col justify-center px-4 pb-20 pt-28 sm:min-h-[720px] sm:px-6 sm:pb-24 sm:pt-32">
         <div className="text-[11px] font-semibold uppercase tracking-cta text-inman-blue">
-          {EVENT.dates} · {EVENT.city}
+          {EVENT.dates}, {EVENT.venue}
         </div>
 
         <h1 className="mt-5 max-w-4xl">
