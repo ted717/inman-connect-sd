@@ -10,9 +10,6 @@ export default function Footer() {
           dotFill="#0a84ff"
           className="h-6 w-auto"
         />
-        <div className="text-[11px] uppercase tracking-cta text-white/40">
-          Super Early-Bird ends soon
-        </div>
         <div className="flex gap-6 text-[11px] uppercase tracking-cta text-white/50">
           <a href="#" className="hover:text-white">Sponsor</a>
           <a href="#" className="hover:text-white">Press</a>
