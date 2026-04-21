@@ -5,21 +5,19 @@ import { useEffect, useRef, useState } from "react";
 type Props = {
   children: React.ReactNode;
   className?: string;
-  delay?: number;
 };
 
-export default function Reveal({ children, className = "", delay = 0 }: Props) {
+export default function Reveal({ children, className = "" }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
       setVisible(true);
       return;
     }
-    const el = ref.current;
-    if (!el) return;
     const obs = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -29,7 +27,7 @@ export default function Reveal({ children, className = "", delay = 0 }: Props) {
           }
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0, rootMargin: "0px 0px -80px 0px" },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -38,13 +36,7 @@ export default function Reveal({ children, className = "", delay = 0 }: Props) {
   return (
     <div
       ref={ref}
-      className={className}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(28px)",
-        transition: `opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1) ${delay}ms, transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1) ${delay}ms`,
-        willChange: visible ? "auto" : "opacity, transform",
-      }}
+      className={`reveal-target ${visible ? "is-visible" : ""} ${className}`}
     >
       {children}
     </div>
