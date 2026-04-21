@@ -10,6 +10,7 @@ import Pricing from "@/components/static/Pricing";
 import FinalCTA from "@/components/static/FinalCTA";
 import FAQ from "@/components/static/FAQ";
 import Footer from "@/components/static/Footer";
+import StickyOffer from "@/components/static/StickyOffer";
 
 export default function Page() {
   return (
@@ -26,6 +27,7 @@ export default function Page() {
       <FinalCTA />
       <FAQ />
       <Footer />
+      <StickyOffer />
     </main>
   );
 }
