@@ -11,22 +11,23 @@ import FinalCTA from "@/components/static/FinalCTA";
 import FAQ from "@/components/static/FAQ";
 import Footer from "@/components/static/Footer";
 import StickyOffer from "@/components/static/StickyOffer";
+import Reveal from "@/components/shared/Reveal";
 
 export default function Page() {
   return (
     <main className="bg-inman-dark">
       <Nav />
       <Hero />
-      <TrustedBy />
-      <Stats />
-      <WhyConnect />
-      <Speakers />
-      <Agenda />
-      <Testimonials />
-      <Pricing />
-      <FinalCTA />
-      <FAQ />
-      <Footer />
+      <Reveal><TrustedBy /></Reveal>
+      <Reveal><Stats /></Reveal>
+      <Reveal><WhyConnect /></Reveal>
+      <Reveal><Speakers /></Reveal>
+      <Reveal><Agenda /></Reveal>
+      <Reveal><Testimonials /></Reveal>
+      <Reveal><Pricing /></Reveal>
+      <Reveal><FinalCTA /></Reveal>
+      <Reveal><FAQ /></Reveal>
+      <Reveal><Footer /></Reveal>
       <StickyOffer />
     </main>
   );
