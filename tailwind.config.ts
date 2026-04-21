@@ -17,9 +17,9 @@ const config: Config = {
         "error-red": "#fd5e4d",
       },
       fontFamily: {
-        sans: ['"HEX Franklin"', "system-ui", "sans-serif"],
-        serif: ['"Harriet Display"', "Georgia", "serif"],
-        display: ["Tungsten", '"HEX Franklin"', "sans-serif"],
+        sans: ["var(--font-hex-franklin)", "system-ui", "sans-serif"],
+        serif: ["var(--font-harriet)", "Georgia", "serif"],
+        display: ["var(--font-tungsten)", "var(--font-hex-franklin)", "sans-serif"],
       },
       borderRadius: {
         btn: "9999px",
